@@ -5,7 +5,7 @@ import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import React, { Suspense } from 'react';
 
-function GetHumanas({ trimestre }) {
+function GetHumanas({ trimestre }: { trimestre: string }) {
   return (
     <div className="rounded-2xl border border-sunglow bg-space-cadet bg-topography-sunglow p-6">
       <Button
@@ -19,7 +19,7 @@ function GetHumanas({ trimestre }) {
   );
 }
 
-function GetNatureza({ trimestre }) {
+function GetNatureza({ trimestre }: { trimestre: string }) {
   return (
     <div className="rounded-2xl border border-aquamarine bg-space-cadet bg-topography-aquamarine p-6">
       <Button
@@ -33,7 +33,7 @@ function GetNatureza({ trimestre }) {
   );
 }
 
-function GetLinguagens({ trimestre }) {
+function GetLinguagens({ trimestre }: { trimestre: string }) {
   return (
     <div className="rounded-2xl border border-bright-pink bg-space-cadet bg-topography-bright-pink p-6">
       <Button
@@ -47,7 +47,7 @@ function GetLinguagens({ trimestre }) {
   );
 }
 
-function GetMatematica({ trimestre }) {
+function GetMatematica({ trimestre }: { trimestre: string }) {
   return (
     <div className="rounded-2xl border border-sunglow bg-space-cadet bg-topography-sunglow p-6">
       <Button
@@ -61,7 +61,7 @@ function GetMatematica({ trimestre }) {
   );
 }
 
-function GetTecnologia({ trimestre }) {
+function GetTecnologia({ trimestre }: { trimestre: string }) {
   return (
     <div className="rounded-2xl border border-bright-pink bg-space-cadet bg-topography-bright-pink p-6">
       <Button
@@ -75,7 +75,7 @@ function GetTecnologia({ trimestre }) {
   );
 }
 
-function GetPPE({ trimestre }) {
+function GetPPE({ trimestre }: { trimestre: string }) {
   return (
     <div className="rounded-2xl border border-aquamarine bg-space-cadet bg-topography-aquamarine p-6">
       <Button
@@ -91,7 +91,7 @@ function GetPPE({ trimestre }) {
 
 export default function AreasConhecimento() {
   const params = useSearchParams();
-  const trimestre = params.get('trimestre');
+  const trimestre = params.get('trimestre') ?? '';
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
