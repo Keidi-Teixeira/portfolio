@@ -3,7 +3,7 @@
 import ProjectCard from '@/components/ProjectCard';
 import { SimpleLayout } from '@/components/SimpleLayout';
 import { useSearchParams } from 'next/navigation';
-
+import { Suspense } from 'react';
 /* --------------------------- Logos for projects --------------------------- */
 import logoYoutube from '@/public/logos/YouTube-White-Full-Color-Logo.wine.svg';
 import logoDocs from '@/public/logos/Google_Docs_logo_(2014-2020).svg';
@@ -135,16 +135,20 @@ function HighLightedWord() {
 
 // Componente principal
 export default function Projects() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SuspenseProjects />
+    </Suspense>
+  );
+}
+
+function SuspenseProjects() {
   const searchParams = useSearchParams();
   const trimestre = Number(searchParams.get('trimestre')) || 1;
   const { title, intro, projects } = projectsData[trimestre];
 
   return (
-    <SimpleLayout
-      HighlightedWord={HighLightedWord()}
-      title={title}
-      intro={intro}
-    >
+    <SimpleLayout title={title} intro={intro}>
       <h2 className="text-4xl font-semibold text-aquamarine sm:text-5xl">
         Projetos obrigatórios
       </h2>
@@ -156,4 +160,3 @@ export default function Projects() {
     </SimpleLayout>
   );
 }
-

@@ -1,8 +1,9 @@
-'use client';
+ 'use client';
 
 import { useSearchParams } from 'next/navigation';
 import ProjectCard from '@/components/ProjectCard';
 import { SimpleLayout } from '@/components/SimpleLayout';
+import { Suspense } from 'react';
 
 // Importação de logos e imagens de projetos
 import logoForms from '@/public/logos/Google_Forms_logo.svg';
@@ -15,8 +16,6 @@ import screenshotFilme from '@/public/assets/projects/filme.jpg';
 import screenshotTorres from '@/public/assets/projects/torres.jpg';
 import screenshotHungryPlanet from '@/public/assets/projects/hungryplanet.png';
 
-
-// Tipagem manual (opcional) se necessário
 type StaticImageData = {
   src: string;
   height: number;
@@ -43,7 +42,6 @@ type ProjectsData = {
   [key: number]: ProjectData;
 };
 
-// Definição dos dados dos projetos e informações de introdução
 const projectsData: ProjectsData = {
   1: {
     title: 'Algum dos assuntos trabalhados no primeiro trimestre de ciências humanas',
@@ -132,7 +130,6 @@ const projectsData: ProjectsData = {
   },
 };
 
-// Função para o título destacado
 function HighLightedWord() {
   return (
     <span className="bg-gradient-to-r from-aquamarine to-bright-pink bg-clip-text text-6xl text-transparent sm:text-8xl">
@@ -141,18 +138,13 @@ function HighLightedWord() {
   );
 }
 
-// Componente principal
-export default function Projects() {
+function ProjectsContent() {
   const searchParams = useSearchParams();
   const trimestre = Number(searchParams.get('trimestre')) || 1;
   const { title, intro, projects } = projectsData[trimestre];
 
   return (
-    <SimpleLayout
-      HighlightedWord={HighLightedWord()}
-      title={title}
-      intro={intro}
-    >
+    <SimpleLayout HighlightedWord={HighLightedWord()} title={title} intro={intro}>
       <h2 className="text-4xl font-semibold text-aquamarine sm:text-5xl">
         Projetos obrigatórios
       </h2>
@@ -162,5 +154,13 @@ export default function Projects() {
         ))}
       </div>
     </SimpleLayout>
+  );
+}
+
+export default function Projects() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProjectsContent />
+    </Suspense>
   );
 }

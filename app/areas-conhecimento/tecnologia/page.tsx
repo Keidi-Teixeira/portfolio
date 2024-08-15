@@ -3,6 +3,7 @@
 import ProjectCard from '@/components/ProjectCard';
 import { SimpleLayout } from '@/components/SimpleLayout';
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
 /* --------------------------- Logos for projects --------------------------- */
 import logoCanva from '@/public/logos/canva.svg';
@@ -261,7 +262,8 @@ function HighLightedWord() {
   );
 }
 
-export default function Projects() {
+// Componente Suspense para carregar os projetos
+function ProjectsContent() {
   const searchParams = useSearchParams();
   const trimestre = Number(searchParams.get('trimestre')) || 1;
   const { title, intro, subjects } = projectsData[trimestre];
@@ -285,5 +287,13 @@ export default function Projects() {
         </div>
       ))}
     </SimpleLayout>
+  );
+}
+
+export default function Projects() {
+  return (
+    <Suspense fallback={<div>Loading projects...</div>}>
+      <ProjectsContent />
+    </Suspense>
   );
 }

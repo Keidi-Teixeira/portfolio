@@ -3,6 +3,7 @@
 import { useSearchParams } from 'next/navigation';
 import ProjectCard from '@/components/ProjectCard';
 import { SimpleLayout } from '@/components/SimpleLayout';
+import { Suspense } from 'react';
 
 /* --------------------------- Logos for projects --------------------------- */
 import logoYoutube from '@/public/logos/YouTube-White-Full-Color-Logo.wine.svg';
@@ -258,6 +259,14 @@ function HighLightedWord() {
 
 // Componente principal
 export default function Projects() {
+  return (
+    <Suspense fallback={<div>Carregando...</div>}>
+      <Content />
+    </Suspense>
+  );
+}
+
+function Content() {
   const searchParams = useSearchParams();
   const trimestre = Number(searchParams.get('trimestre')) || 1;
   const { title, intro, projects, personalProject } = projectsData[trimestre];
