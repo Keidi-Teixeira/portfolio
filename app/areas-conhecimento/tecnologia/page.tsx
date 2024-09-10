@@ -2,6 +2,7 @@
 
 'use client';
 
+import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
@@ -62,7 +63,7 @@ function GetImplantacaoManutencao({ trimestre }: { trimestre: string }) {
   );
 }
 
-export default function TecnologiaPage() {
+function TecnologiaPageContent() {
   const params = useSearchParams();
   const trimestre = params.get('trimestre') ?? '';
 
@@ -79,5 +80,13 @@ export default function TecnologiaPage() {
         </div>
       </div>
     </Container>
+  );
+}
+
+export default function TecnologiaPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <TecnologiaPageContent />
+    </Suspense>
   );
 }
