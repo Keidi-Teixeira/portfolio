@@ -11,6 +11,8 @@ import logoDocs from '@/public/logos/Google_Docs_logo_(2014-2020).svg';
 import logoSlides from '@/public/logos/Google_Slides_2020_Logo.svg';
 
 import screenshotMiniconto from '@/public/assets/projects/miniconto.jpg';
+import screenshotMaquete from '@/public/assets/projects/maquete.jpg';
+import screenshotLivro from '@/public/assets/projects/livro.jpg';
 import screenshotModernismo from '@/public/assets/projects/modernismo.jpg';
 import screenshotRedacao from '@/public/assets/projects/redacao.png';
 import logoDrive from '@/public/logos/Google_Drive_icon_(2020).svg';
@@ -92,12 +94,37 @@ const projectsData: ProjectsData = {
         ],
         image: screenshotRedacao,
         logo: logoDrive,
-        appLink: 'https://drive.google.com/file/d/1RJ1wY5H_XOmIWeMiA4Pr4w9TAJYRfex3/view?usp=sharing', // Replace with actual link
+        appLink: 'https://drive.google.com/file/d/1RJ1wY5H_XOmIWeMiA4Pr4w9TAJYRfex3/view?usp=sharing', 
+      },
+      {
+        name: 'Maquete livro solitária',
+        description:
+          'Maquete realizada de acordo com o tema do livro solitária, capturando a essência do que a obra quer transmitir.',
+        tags: [
+          { name: 'H15', color: 'text-purple-400' }, 
+          { name: 'H11', color: 'text-blue-400' },
+          { name: 'H25', color: 'text-cyan-600' },
+        ],
+        image: screenshotMaquete,
+        logo: logoDrive,
+        appLink: 'https://drive.google.com/file/d/1uXIZ8l4V1CfRJs5yzgh2OhHytz4FUSbF/view?usp=sharing', 
+      },
+      {
+        name: 'Poema',
+        description:
+          'Poema em inglês e português de acordo com o tema do livro solitária.',
+          tags: [
+            { name: 'H15', color: 'text-purple-400' }, 
+            { name: 'H11', color: 'text-blue-400' },
+            { name: 'H25', color: 'text-cyan-600' },
+          ],
+        image: screenshotLivro,
+        logo: logoDocs,
+        appLink: 'https://docs.google.com/document/d/1HHGrdbvNwUWkYNrHVkA-YJ36ZijWMbubghZUrPWfw3c/edit?usp=sharing', 
       },
     ],
   },
 };
-
 
 
 function HighLightedWord() {
@@ -107,11 +134,6 @@ function HighLightedWord() {
     </span>
   );
 }
-
-//export const metadata: Metadata = {
-//  title: 'Projetos',
-//  description: `Projetos do primeiro trimestre de linguagens`,
-//};
 
 function ProjectsContent() {
   const searchParams = useSearchParams();
