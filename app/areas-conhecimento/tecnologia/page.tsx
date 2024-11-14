@@ -9,11 +9,40 @@ import { Container } from '@/components/Container';
 
 function GetModelagemSistemas({ trimestre }: { trimestre: string }) {
   return (
-    <div className="rounded-2xl border border-aquamarine bg-space-cadet bg-topography-aquamarine p-6">
+    <div className="rounded-2xl border border-sunglow bg-space-cadet bg-topography-sunglow p-6">
       <Button
         href={`/areas-conhecimento/tecnologia/modelagem-sistemas?trimestre=${trimestre}`}
         variant="primary"
         text="Modelagem de Sistemas"
+        type="button"
+        className="mt-6 w-full"
+      />
+    </div>
+  );
+}
+
+function GetProgramacaoAplicativosPage({ trimestre }: { trimestre: string }) {
+  return (
+    <div className="rounded-2xl border border-aquamarine bg-space-cadet bg-topography-aquamarine p-6">
+      <Button
+        href={`/areas-conhecimento/tecnologia/programacao-aplicativos?trimestre=${trimestre}`}
+        variant="primary"
+        text="Programação de Aplicativos"
+        type="button"
+        className="mt-6 w-full"
+      />
+    </div>
+  );
+}
+
+
+function GetTesteSistemasPage({ trimestre }: { trimestre: string }) {
+  return (
+    <div className="rounded-2xl border border-aquamarine bg-space-cadet bg-topography-aquamarine p-6">
+      <Button
+        href={`/areas-conhecimento/tecnologia/testes-sistemas?trimestre=${trimestre}`}
+        variant="primary"
+        text="Testes de Sistemas"
         type="button"
         className="mt-6 w-full"
       />
@@ -73,10 +102,12 @@ function TecnologiaPageContent() {
         <div className="flex flex-col space-y-10">
           <GetModelagemSistemas trimestre={trimestre} />
           <GetBancoDados trimestre={trimestre} />
+          <GetProgramacaoAplicativosPage trimestre={trimestre} />
         </div>
         <div className="flex flex-col space-y-10">
           <GetDesenvolvimentoSistemas trimestre={trimestre} />
           <GetImplantacaoManutencao trimestre={trimestre} />
+          <GetTesteSistemasPage trimestre={trimestre} />
         </div>
       </div>
     </Container>

@@ -12,11 +12,14 @@ import logoSlides from '@/public/logos/Google_Slides_2020_Logo.svg';
 import logoCanva from '@/public/logos/canva.svg';
 
 import screenshotEvolucionismo from '@/public/assets/projects/evolucionismo.jpg';
+import screenshotUranio from '@/public/assets/projects/uranio.png';
 import screenshotCircuitos from '@/public/assets/projects/circuitos.jpg';
 import screenshotOrganica from '@/public/assets/projects/organica.jpg';
 import screenshotSolar from '@/public/assets/projects/solar.jpg';
 import screenshotRelacoesEcologicas from '@/public/assets/projects/relacoes_ecologicas.png';
 import screenshotMeioAmbiente from '@/public/assets/projects/meioambiente.png';
+import screenshotDegradacao from '@/public/assets/projects/degradacao.jpg';
+import screenshotRadioativo from '@/public/assets/projects/radioativo.png';
 
 // Tipagem manual (opcional) se necessário
 type StaticImageData = {
@@ -242,6 +245,132 @@ const projectsData: ProjectsData = {
       image: screenshotSolar,
       logo: logoSlides,
       appLink: 'https://docs.google.com/presentation/d/1Y8PtnkJper055NMIK1hRwTo1NJhcHvIulLrlpGZXcJU/edit?usp=sharing',
+    },
+  },
+
+
+
+
+  3: {
+    title: 'Temas trabalhados no terceiro trimestre de ciências da natureza',
+    intro: 'Desequilíbrio nos ecossistemas, Isomeria, Radioatividade, Ecologia',
+    projects: [
+      {
+        name: 'Desequilíbrios ambientais',
+        description: 'Na atividade sobre "Degradação do Solo," exploramos temas como desertificação, erosão e salinização, focando nas causas e nos impactos ambientais e alimentares. Pesquisamos o assunto, respondemos sete questões individualmente e criamos uma apresentação. Dividimos as subtemáticas para cobrir bem o tema e enfrentamos o desafio de organizar as informações de forma clara. Gostei especialmente de entender o impacto das ações humanas na degradação do solo e refletir sobre soluções sustentáveis.',
+        tags: [
+          {
+            name: 'C5',
+            color: 'text-sunglow',
+          },
+          {
+            name: 'H27',
+            color: 'text-blue-400',
+          },
+          {
+            name: 'H28',
+            color: 'text-emerald-500',
+          },
+        ],
+        image: screenshotDegradacao,
+        logo: logoSlides,
+        appLink: 'https://docs.google.com/presentation/d/1altygCk7SyQBJWJ05KtsntznQh4OFUVXy8bdFDyZhqs/edit?usp=sharing',
+      },
+      {
+        name: 'Estudo dirigido sobre eletricidade',
+        description: 'Estudo dirigido sobre eletricidade.',
+        tags: [
+          {
+            name: 'C2',
+            color: 'text-sunglow',
+          },
+          {
+            name: 'H6',
+            color: 'text-blue-400',
+          },
+          {
+            name: 'C6',
+            color: 'text-emerald-500',
+          },
+          {
+            name: 'H34',
+            color: 'text-indigo-300',
+          },
+        ],
+        image: screenshotCircuitos,
+        logo: logoDocs,
+        appLink: 'https://docs.google.com/document/d/1RGQcHN9w6uZ5hAr_V9jgAEH495KdVMWVvGd4Gy0OMxQ/edit?usp=sharing',
+      },
+      {
+        name: 'Emissões Radioativas  Enriquecimento Do Urânio',
+        description: 'Na atividade sobre "Enriquecimento do Urânio," elaboramos uma apresentação para o portfólio que explicava o processo, países com essa tecnologia, usos nucleares, emissões, o caso do Brasil, e os controles globais. Dividimos as etapas de pesquisa para agilizar, enfrentando a dificuldade de entender os detalhes técnicos do processo. A parte mais interessante foi explorar curiosidades e o papel do Brasil no cenário mundial. A atividade proporcionou uma visão aprofundada sobre segurança e sustentabilidade nuclear.',
+        tags: [
+          {
+            name: 'C5',
+            color: 'text-aquamarine',
+          },
+          {
+            name: 'H24',
+            color: 'text-emerald-500',
+          },
+          {
+            name: 'H25',
+            color: 'text-bright-pink',
+          },
+          {
+            name: '26',
+            color: 'text-indigo-300',
+          },
+          {
+            name: 'H23',
+            color: 'text-sunglow',
+          },
+          {
+            name: 'H27',
+            color: 'text-blue-400',
+          },
+          {
+            name: 'H28',
+            color: 'text-emerald-500',
+          },
+        ],
+        image: screenshotUranio,
+        logo: logoSlides,
+        appLink: 'https://docs.google.com/presentation/d/1uvjfUk9jlNUgkloSgfun10kfudoOzDgBO9DXp9R9WII/edit?usp=sharing',
+      },
+    ],
+    personalProject: {
+      name: 'Decaimento Radioativo',
+      description: 'A atividade consistiu em pesquisar e apresentar sobre o decaimento radioativo e suas aplicações, incluindo temas como datação por carbono-14 e o uso de radioisótopos na medicina. Dividimos os tópicos para facilitar a pesquisa e enfrentamos o desafio de simplificar conceitos técnicos. Gostei de explorar as aplicações na arqueologia, tornando o aprendizado mais interessante. A atividade uniu ciência e prática, aprimorando nossas habilidades de análise e apresentação.',
+      tags: [
+        {
+          name: 'C55',
+          color: 'text-aquamarine',
+        },
+        {
+          name: 'H24',
+          color: 'text-emerald-500',
+        },
+        {
+          name: 'H25',
+          color: 'text-bright-pink',
+        },
+        {
+          name: 'H26',
+          color: 'text-indigo-300',
+        },
+        {
+          name: 'H27',
+          color: 'text-sunglow',
+        },
+        {
+          name: 'H28',
+          color: 'text-blue-400',
+        },
+      ],
+      image: screenshotRadioativo,
+      logo: logoSlides,
+      appLink: 'https://docs.google.com/presentation/d/1K4QhPc4BW942zsuHLn-T-fxWOZAytZzzmr4JglTzPYY/edit?usp=sharing',
     },
   },
 };

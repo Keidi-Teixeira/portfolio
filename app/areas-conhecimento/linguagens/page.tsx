@@ -11,10 +11,12 @@ import logoDocs from '@/public/logos/Google_Docs_logo_(2014-2020).svg';
 import logoSlides from '@/public/logos/Google_Slides_2020_Logo.svg';
 
 import screenshotMiniconto from '@/public/assets/projects/miniconto.jpg';
+import screenshotModernismo1 from '@/public/assets/projects/modernismo.png';
 import screenshotMaquete from '@/public/assets/projects/maquete.jpg';
 import screenshotLivro from '@/public/assets/projects/livro.jpg';
 import screenshotModernismo from '@/public/assets/projects/modernismo.jpg';
 import screenshotRedacao from '@/public/assets/projects/redacao.png';
+import screenshotRedacaOnline from '@/public/assets/projects/redacaonline.png';
 import logoDrive from '@/public/logos/Google_Drive_icon_(2020).svg';
 
 
@@ -111,6 +113,58 @@ const projectsData: ProjectsData = {
       },
       {
         name: 'Poema',
+        description:
+          'Poema em inglês e português de acordo com o tema do livro solitária.',
+          tags: [
+            { name: 'H15', color: 'text-purple-400' }, 
+            { name: 'H11', color: 'text-blue-400' },
+            { name: 'H25', color: 'text-cyan-600' },
+          ],
+        image: screenshotLivro,
+        logo: logoDocs,
+        appLink: 'https://docs.google.com/document/d/1HHGrdbvNwUWkYNrHVkA-YJ36ZijWMbubghZUrPWfw3c/edit?usp=sharing', 
+      },
+    ],
+  },
+
+
+
+
+  3: {
+    title: 'Temas trabalhados no terceiro trimestre de linguagens',
+    intro: 'Modernismo, Geração de 30',
+    projects: [
+      {
+        name: 'Print da Nota da Redação Online',
+        description:
+          'Avaliação e feedback da redação online, focando em aspectos de estrutura, coesão, e coerência textual. Para mais informações acesse o Link.',
+        tags: [
+          { name: 'H6', color: 'text-purple-400' },
+          { name: 'H5', color: 'text-blue-400' },
+          { name: 'H8', color: 'text-cyan-600' },
+        ],
+        image: screenshotRedacaOnline,
+        logo: logoDrive,
+        appLink: 'https://drive.google.com/file/d/14dd4m4KC8MUd-7qG0j_czKtV37EsDked/view?usp=sharing', 
+      },
+      {
+        name: 'Modernismo',
+        description:
+          'Na atividade da "Revista Literária" sobre o Modernismo, pesquisamos suas fases, principais autores e impacto cultural. Dividimos as tarefas entre os membros, cada um abordando um aspecto específico. O desafio foi sintetizar as informações de forma clara e criativa, mantendo o estilo da época. Gostei de explorar as inovações do Modernismo e compreender a importância dos autores na cultura brasileira, tornando o projeto envolvente e enriquecedor.',
+        tags: [
+          { name: 'H4', color: 'text-purple-400' }, 
+          { name: 'H6', color: 'text-blue-400' },
+          { name: 'H10', color: 'text-cyan-600' },
+          { name: 'H14', color: 'text-sunglow' },
+          { name: 'H13', color: 'text-emerald-500' },
+          { name: 'H15', color: 'text-bright-pink' },
+        ], 
+        image: screenshotModernismo1,
+        logo: logoDrive,
+        appLink: 'https://drive.google.com/file/d/1h7jtWIVM6HYxQSGek7Y-tJ6vQzBdbVk6/view?usp=sharing', 
+      },
+      {
+        name: 'Tropicalismo',
         description:
           'Poema em inglês e português de acordo com o tema do livro solitária.',
           tags: [

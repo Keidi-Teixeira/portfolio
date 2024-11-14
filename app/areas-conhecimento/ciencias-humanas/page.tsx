@@ -7,6 +7,7 @@ import { Suspense } from 'react';
 
 // Importação de logos e imagens de projetos
 import logoForms from '@/public/logos/Google_Forms_logo.svg';
+import logoCanva from '@/public/logos/canva.svg';
 import logoDocs from '@/public/logos/Google_Docs_logo_(2014-2020).svg';
 import logoSlides from '@/public/logos/Google_Slides_2020_Logo.svg';
 import screenshot1984Movie from '@/public/assets/projects/filmes1984.jpg';
@@ -15,6 +16,8 @@ import screenshotDoutrina from '@/public/assets/projects/doutrina.png';
 import screenshotFilme from '@/public/assets/projects/filme.jpg';
 import screenshotTorres from '@/public/assets/projects/torres.jpg';
 import screenshotHungryPlanet from '@/public/assets/projects/hungryplanet.png';
+import screenshotguerrafria from '@/public/assets/projects/guerra-fria.jpg';
+import screenshotditadura from '@/public/assets/projects/ditadura.jpg';
 
 type StaticImageData = {
   src: string;
@@ -125,6 +128,43 @@ const projectsData: ProjectsData = {
         image: screenshot1984Movie, 
         logo: logoSlides, 
         appLink: 'https://docs.google.com/presentation/d/1NBGY0sakWtcugc3KSoj8fv0ZPx9tt3MZ5JLASQcNeDQ/edit?usp=sharing',
+      },
+    ],
+  },
+  3: {
+    title: 'Temas trabalhados no terceiro trimestre de ciências humanas',
+    intro: 'Guerra Fria, A Ditadura Civil-Militar no Brasil',
+    projects: [
+      {
+        name: 'A Ditadura Civil-Militar no Brasil',
+        description: 'A atividade sobre a Ditadura Militar (1967-1978) teve como proposta explorar e apresentar um evento significativo desse período. Meu grupo escolheu um evento marcante e detalhamos informações sobre as pessoas envolvidas, o local dos fatos, a cronologia, e a recepção pública, complementando com mapas e fotos para facilitar o entendimento. Utilizamos documentos originais do site "Documentos Revelados", o que foi desafiador, pois exigiu análise cuidadosa e contextualização histórica. A parte que mais gostei foi trabalhar com essas fontes, pois trouxe uma compreensão mais profunda e crítica sobre o evento escolhido.',
+        tags: [
+          { name: 'C6', color: 'text-green-400' },
+          { name: 'H39', color: 'text-red-400' },    
+          { name: 'H40', color: 'text-yellow-400' },
+          { name: 'C6', color: 'text-blue-400' },
+          { name: 'H34', color: 'text-pink-400' },
+          { name: 'H35', color: 'text-purple-400' },
+        ],
+        image: screenshotditadura, 
+        logo: logoSlides,    
+        appLink: 'https://docs.google.com/presentation/d/1JIHbpAwAahePT-IjMW4t6z6hdGCxugaJFYercV3pK0U/edit?usp=sharing',
+      },
+      {
+        name: 'Guerra Fria',
+        description: 'Na atividade sobre a Guerra Fria, criamos uma apresentação no Canva que explicava as tensões e rivalidades entre EUA e URSS. Escolhemos personagens para representar cada lado e destacamos um prédio que simboliza o medo nuclear. Também usamos uma foto sobre as ditaduras da época, um atleta que refletia a disputa ideológica, gráficos comparando dados dos dois países, e detalhes sobre um armamento da Guerra Fria. Analisar os dados e explorar o impacto dos esportes foram os pontos que mais gostei. Concluímos com imagens simbólicas de cada superpotência e um resumo das principais descobertas.',
+        tags: [
+          { name: 'C6', color: 'text-blue-400' },
+          { name: 'H39', color: 'text-purple-400' },
+          { name: 'H40', color: 'text-pink-400' },
+          { name: 'C5', color: 'text-yellow-400' },  
+          { name: 'H28', color: 'text-green-400' }, 
+          { name: 'H30', color: 'text-red-400' }, 
+          { name: 'H32', color: 'text-cyan-600' }, 
+        ],
+        image: screenshotguerrafria, 
+        logo: logoCanva, 
+        appLink: 'https://www.canva.com/design/DAGSPSjlVOo/Xigi9I80v1gNHgdLWs-iYA/edit?utm_content=DAGSPSjlVOo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
       },
     ],
   },

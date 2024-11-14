@@ -7,11 +7,13 @@ import { Suspense } from 'react';
 /* --------------------------- Logos for projects --------------------------- */
 import logoYoutube from '@/public/logos/YouTube-White-Full-Color-Logo.wine.svg';
 import logoDocs from '@/public/logos/Google_Docs_logo_(2014-2020).svg';
+import logoSlides from '@/public/logos/Google_Slides_2020_Logo.svg';
 //import logoGenially from '@/public/logos/genially_logo.svg';
 
 import screenshotTesouro from '@/public/assets/projects/tesouro.jpg';
 //import screenshotBancoImobiliario from '@/public/assets/projects/banco_imobiliario.jpg';
 import screenshotQuebrandoBanca from '@/public/assets/projects/quebrando_banca.jpg';
+import screenshotPlatao from '@/public/assets/projects/platao.png';
 
 type StaticImageData = {
   src: string;
@@ -119,6 +121,39 @@ const projectsData: ProjectsData = {
         image: screenshotQuebrandoBanca,
         logo: logoDocs,
         appLink: 'https://docs.google.com/document/d/16_eELm-0jzFuLIC8RmyWuJuzjWrwmiUUcHFLKGCIpxg/edit?usp=sharing',
+      },
+    ],
+  },
+
+  3: {
+    title: 'Algum dos assuntos trabalhados no terceiro trimestre de matemática',
+    intro: 'Geometria plana, Geometria espacial, Números complexos',
+    projects: [
+      {
+        name: 'Poliedros de Platão',
+        description:
+          'Na atividade sobre Poliedros de Platão, construímos modelos de Tetraedro, Hexaedro e Octaedro usando palitos de churrasco e balas de goma, tiramos fotos e vídeos, e calculamos área e volume de cada figura. Dividimos as tarefas entre construção e cálculos. A maior dificuldade foi manter a estabilidade das formas, mas isso tornou o trabalho mais interessante. Gostei de visualizar as formas tridimensionais e aplicar conceitos matemáticos de forma prática e criativa.',
+        tags: [
+          {
+            name: 'C1',
+            color: 'text-sunglow',
+          },
+          {
+            name: 'H4',
+            color: 'text-blue-400',
+          },
+          {
+            name: 'H34',
+            color: 'text-aquamarine',
+          },
+          {
+            name: 'H36',
+            color: 'text-bright-pink',
+          },
+        ],
+        image: screenshotPlatao,
+        logo: logoSlides,
+        appLink: 'https://docs.google.com/presentation/d/1LPGR-Rp4kXXWJY-jiDaodFMylVOhJJGoxB32mLPlP80/edit?usp=sharing',
       },
     ],
   },

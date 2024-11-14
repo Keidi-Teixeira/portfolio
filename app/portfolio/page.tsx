@@ -71,7 +71,7 @@ function GetPortfolioAntigo() {
         <Button
             href="/areas-conhecimento?trimestre=3"
             variant="primary"
-            text="Terceiro trimestre (em construção)"
+            text="Terceiro trimestre"
             type="button"
             className="mt-6 w-full"
           />
