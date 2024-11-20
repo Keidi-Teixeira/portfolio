@@ -9,6 +9,7 @@ import { useSearchParams } from 'next/navigation';
 /* --------------------------- Logos for projects --------------------------- */
 import logoDocs from '@/public/logos/Google_Docs_logo_(2014-2020).svg';
 import logoSlides from '@/public/logos/Google_Slides_2020_Logo.svg';
+import logoDrive from '@/public/logos/Google_Drive_icon_(2020).svg';
 
 import screenshotMiniconto from '@/public/assets/projects/miniconto.jpg';
 import screenshotModernismo1 from '@/public/assets/projects/modernismo.png';
@@ -17,7 +18,7 @@ import screenshotLivro from '@/public/assets/projects/livro.jpg';
 import screenshotModernismo from '@/public/assets/projects/modernismo.jpg';
 import screenshotRedacao from '@/public/assets/projects/redacao.png';
 import screenshotRedacaOnline from '@/public/assets/projects/redacaonline.png';
-import logoDrive from '@/public/logos/Google_Drive_icon_(2020).svg';
+import screenshotTropicalismo from '@/public/assets/projects/tropicalismo.jpg';
 
 
 type StaticImageData = {
@@ -164,17 +165,16 @@ const projectsData: ProjectsData = {
         appLink: 'https://drive.google.com/file/d/1h7jtWIVM6HYxQSGek7Y-tJ6vQzBdbVk6/view?usp=sharing', 
       },
       {
-        name: 'Tropicalismo',
+        name: 'Tropicalismo e Poesia Concretista',
         description:
-          'Poema em inglês e português de acordo com o tema do livro solitária.',
+          'A atividade consistiu na criação de videoclipes inspirados no álbum Tropicália ou Panis Et Circencis, com foco em representar o movimento tropicalista e seu contexto sociopolítico. Os grupos realizaram pesquisas sobre as músicas, planejaram conceitos visuais e sonoros e produziram vídeos com elementos como psicodelia e contrastes urbano-rurais. Apesar de desafios técnicos e organizacionais, a experiência foi enriquecedora, destacando a criatividade e a conexão com a cultura brasileira dos anos 60.',
           tags: [
-            { name: 'H15', color: 'text-purple-400' }, 
-            { name: 'H11', color: 'text-blue-400' },
-            { name: 'H25', color: 'text-cyan-600' },
+            { name: 'H3', color: 'text-purple-400' }, 
+            { name: 'H16', color: 'text-blue-400' },
           ],
-        image: screenshotLivro,
-        logo: logoDocs,
-        appLink: 'https://docs.google.com/document/d/1HHGrdbvNwUWkYNrHVkA-YJ36ZijWMbubghZUrPWfw3c/edit?usp=sharing', 
+        image: screenshotTropicalismo,
+        logo: logoDrive,
+        appLink: 'https://drive.google.com/file/d/1pe9ToENtVIPpVyjsrg1Il0YCO2zRm_I8/view?usp=sharing', 
       },
     ],
   },
